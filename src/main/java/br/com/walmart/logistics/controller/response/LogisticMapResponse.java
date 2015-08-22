@@ -1,12 +1,11 @@
-package br.com.walmart.logistics.core.entity;
+package br.com.walmart.logistics.controller.response;
 
 import java.util.List;
 
-/**
- * Mapa de logistica para entregas
- * @author Denis soares moreira
- */
-public class LogisticMap {
+import br.com.walmart.logistics.core.entity.RouteMap;
+
+
+public class LogisticMapResponse {
 
 	/**
 	 * Indentificador único 
@@ -64,7 +63,5 @@ public class LogisticMap {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	
+
 }

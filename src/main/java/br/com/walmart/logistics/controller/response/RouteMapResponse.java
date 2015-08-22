@@ -1,11 +1,11 @@
-package br.com.walmart.logistics.core.entity;
+package br.com.walmart.logistics.controller.response;
 
 /**
  * Detalhes do mapa logistico 
  * @author Denis soares moreira
  *
  */
-public class RouteMap {
+public class RouteMapResponse {
 
 	/**
 	 * Indentificador único 

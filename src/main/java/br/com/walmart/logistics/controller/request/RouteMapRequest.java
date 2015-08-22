@@ -1,17 +1,12 @@
-package br.com.walmart.logistics.core.entity;
+package br.com.walmart.logistics.controller.request;
 
 /**
  * Detalhes do mapa logistico 
  * @author Denis soares moreira
  *
  */
-public class RouteMap {
+public class RouteMapRequest {
 
-	/**
-	 * Indentificador único 
-	 */
-	private String id;
-	
 	/**
 	 * Ponto de origem
 	 */
@@ -67,20 +62,6 @@ public class RouteMap {
 	 */
 	public void setDistancePoints(String distancePoints) {
 		this.distancePoints = distancePoints;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(String id) {
-		this.id = id;
 	}
 	
 	

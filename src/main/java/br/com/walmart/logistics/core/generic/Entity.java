@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 
 /**
- * 
+ * Entity gerenic para contrato com as entidades, garatindo que os documentos terão id e serão serializable
  * @author Denis soares moreira
  *
  */

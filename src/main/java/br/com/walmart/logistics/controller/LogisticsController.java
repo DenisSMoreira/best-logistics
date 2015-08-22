@@ -3,8 +3,10 @@
  */
 package br.com.walmart.logistics.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,7 @@ import br.com.walmart.logistics.controller.request.LogisticMapRequest;
 import br.com.walmart.logistics.controller.response.LogisticMapResponse;
 import br.com.walmart.logistics.controller.response.RouteMapResponse;
 import br.com.walmart.logistics.core.entity.LogisticMap;
+import br.com.walmart.logistics.service.LogisticsService;
 
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
@@ -31,6 +34,9 @@ import com.wordnik.swagger.annotations.ApiResponses;
 @RequestMapping("/logistics")
 public class LogisticsController {
 
+	@Autowired
+	private LogisticsService logisticsService;
+	
 	/**
 	 * Retorna todas as rotas postadas anteriormente
 	 * 
@@ -44,7 +50,7 @@ public class LogisticsController {
 	public @ResponseBody List<LogisticMap> findAllRoutesMaps() {
 		
 		
-		return null;
+		return new ArrayList<LogisticMap>();
 	}
 	
 	/**

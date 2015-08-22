@@ -25,7 +25,7 @@ public class RouteMap {
 	/**
 	 * Distância entre os pontos em quilômetros
 	 */
-	private String distancePoints;
+	private Double distancePoints;
 
 	/**
 	 * @return the pointOrigin
@@ -58,14 +58,14 @@ public class RouteMap {
 	/**
 	 * @return the distancePoints
 	 */
-	public String getDistancePoints() {
+	public Double getDistancePoints() {
 		return distancePoints;
 	}
 
 	/**
 	 * @param distancePoints the distancePoints to set
 	 */
-	public void setDistancePoints(String distancePoints) {
+	public void setDistancePoints(Double distancePoints) {
 		this.distancePoints = distancePoints;
 	}
 
@@ -83,6 +83,57 @@ public class RouteMap {
 		this.id = id;
 	}
 	
-	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((destinationPoint == null) ? 0 : destinationPoint.hashCode());
+		result = prime * result
+				+ ((distancePoints == null) ? 0 : distancePoints.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result
+				+ ((pointOrigin == null) ? 0 : pointOrigin.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		RouteMap other = (RouteMap) obj;
+		if (destinationPoint == null) {
+			if (other.destinationPoint != null)
+				return false;
+		} else if (!destinationPoint.equals(other.destinationPoint))
+			return false;
+		if (distancePoints == null) {
+			if (other.distancePoints != null)
+				return false;
+		} else if (!distancePoints.equals(other.distancePoints))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (pointOrigin == null) {
+			if (other.pointOrigin != null)
+				return false;
+		} else if (!pointOrigin.equals(other.pointOrigin))
+			return false;
+		return true;
+	}
 	
 }

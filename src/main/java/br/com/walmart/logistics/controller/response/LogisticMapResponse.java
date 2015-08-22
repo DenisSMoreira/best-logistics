@@ -2,9 +2,11 @@ package br.com.walmart.logistics.controller.response;
 
 import java.util.List;
 
-import br.com.walmart.logistics.core.entity.RouteMap;
-
-
+/**
+ * Pojo de resposta, usado para um posivel tratamento especial de retorno para os consumidores
+ * @author Denis soares moreira
+ *
+ */
 public class LogisticMapResponse {
 
 	/**
@@ -20,7 +22,7 @@ public class LogisticMapResponse {
 	/**
 	 * Detalhes do mapa logistico que contem a rota
 	 */
-	private List<RouteMap> routeMap;
+	private List<RouteMapResponse> routeMap;
 
 	/**
 	 * @return the id
@@ -37,20 +39,6 @@ public class LogisticMapResponse {
 	}
 
 	/**
-	 * @return the routeMap
-	 */
-	public List<RouteMap> getRouteMap() {
-		return routeMap;
-	}
-
-	/**
-	 * @param routeMap the routeMap to set
-	 */
-	public void setRouteMap(List<RouteMap> routeMap) {
-		this.routeMap = routeMap;
-	}
-
-	/**
 	 * @return the name
 	 */
 	public String getName() {
@@ -62,6 +50,20 @@ public class LogisticMapResponse {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	/**
+	 * @return routeMap {@link List<RouteMapResponse>}
+	 */
+	public List<RouteMapResponse> getRouteMap() {
+		return routeMap;
+	}
+
+	/**
+	 * @param routeMap the routeMap to set
+	 */
+	public void setRouteMap(List<RouteMapResponse> routeMap) {
+		this.routeMap = routeMap;
 	}
 
 }

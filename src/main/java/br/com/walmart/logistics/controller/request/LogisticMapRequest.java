@@ -2,8 +2,6 @@ package br.com.walmart.logistics.controller.request;
 
 import java.util.List;
 
-import br.com.walmart.logistics.core.entity.RouteMap;
-
 public class LogisticMapRequest {
 
 	/**
@@ -14,21 +12,7 @@ public class LogisticMapRequest {
 	/**
 	 * Detalhes do mapa logistico que contem a rota
 	 */
-	private List<RouteMap> routeMap;
-
-	/**
-	 * @return the routeMap
-	 */
-	public List<RouteMap> getRouteMap() {
-		return routeMap;
-	}
-
-	/**
-	 * @param routeMap the routeMap to set
-	 */
-	public void setRouteMap(List<RouteMap> routeMap) {
-		this.routeMap = routeMap;
-	}
+	private List<RouteMapRequest> routeMap;
 
 	/**
 	 * @return the name
@@ -42,6 +26,20 @@ public class LogisticMapRequest {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	/**
+	 * @return routeMap {@link List<RouteMapRequest>}
+	 */
+	public List<RouteMapRequest> getRouteMap() {
+		return routeMap;
+	}
+
+	/**
+	 * @param routeMap the routeMap to set
+	 */
+	public void setRouteMap(List<RouteMapRequest> routeMap) {
+		this.routeMap = routeMap;
 	}
 	
 

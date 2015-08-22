@@ -9,10 +9,10 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 
 /**
+ * Entity gerenic para contrato com as entidades
  * @author Denis soares moreira
  *
  */
-public interface GenericMongoDBRepository<T extends Entity, ID extends Serializable>
-		extends MongoRepository<T, ID> {
+public interface GenericMongoDBRepository<T extends Entity, ID extends Serializable> extends MongoRepository<T, ID> {
 
 }

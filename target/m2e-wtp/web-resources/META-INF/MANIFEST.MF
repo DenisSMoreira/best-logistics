@@ -3,7 +3,7 @@ Implementation-Title: walmart-logistics-api
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: denis_000
 Implementation-Vendor-Id: br.com.walmart.challenge
-Build-Jdk: 1.8.0_51
+Build-Jdk: 1.8.0_60
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

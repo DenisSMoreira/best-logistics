@@ -108,6 +108,7 @@ public class LogisticsService {
 			listBestWay.add(menorAdjacente);
 			listRoutesMaps.remove(menorAdjacente);
 			
+			//For each normal para que se tenha a opção de usar o break.
 			for (RouteMap routeMap : listRoutesMaps) {
 				
 				if(routeMap.getPointOrigin().equals(menorAdjacente.getDestinationPoint())){

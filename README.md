@@ -11,7 +11,7 @@ Esse sistema pretende melhorar as entregas aplicando uma logística que sempre v
 
   * Java 8: Alem de ter acabado de sair do forno, o java 8 vem com features realmente interessantes que pode vir a ser bem útil no crescimento dessa solução, tais como desempenho aprimorado, lambda, streams entre outros, e não queremos um sistema lento para nossos clientes, não é? Eis o motivo da minha escolha!
   
-  * Maven 3: Ótimo gereciador de dependências (diga não ao .jar em classpath!) escolhi ele pois tenho grande domínio sobre ele. 
+  * Maven 3: Ótimo gereciador de dependências (diga não ao .jar em classpath!) escolhi ele pois tenho grande domínio. 
   
   * MongoDB: Ele vem como uma grande promessa dos últimos tempos, e tem meu voto de confiança já que trabalho com ele a algum tempo e ele não vem me decepcionando, existi sim outros bancos de dados não relacionais que mostram um desempenho ainda melhor que ele, porém o motivo da minha escolha foi sua estabilidade e a facilidade que tenho em trabalhar com ele.
   

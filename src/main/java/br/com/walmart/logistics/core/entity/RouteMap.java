@@ -1,10 +1,13 @@
 package br.com.walmart.logistics.core.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Detalhes do mapa logistico 
  * @author Denis soares moreira
  *
  */
+@Document
 public class RouteMap {
 
 	/**

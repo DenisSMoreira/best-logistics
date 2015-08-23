@@ -1,7 +1,5 @@
 package br.com.walmart.logistics.core.repository;
 
-import org.springframework.data.mongodb.repository.Query;
-
 import br.com.walmart.logistics.core.entity.LogisticMap;
 import br.com.walmart.logistics.core.generic.GenericMongoDBRepository;
 
@@ -21,12 +19,5 @@ public interface LogisticsRepository extends GenericMongoDBRepository<LogisticMa
 	 * @return LogisticMap.class
 	 */
 	LogisticMap findByName(String name);
-	
-	/**
-	 * Procura o LogisticMap de acordo com o nome ou apelido cadastrado
-	 * @param name {@link String} 
-	 * @return LogisticMap.class
-	 */
-    @Query(value = "{'listRoutesMaps.pointOrigin' : ?0 }", fields = "{ 'listRoutesMaps.pointOrigin' : 0 }")
-	LogisticMap findByListRoutesMapsPointOrigin(String pointOrigin);
+
 }

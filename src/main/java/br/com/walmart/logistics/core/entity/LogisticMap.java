@@ -2,12 +2,16 @@ package br.com.walmart.logistics.core.entity;
 
 import java.util.List;
 
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import br.com.walmart.logistics.core.generic.Entity;
 
 /**
  * Mapa de logistica para entregas
  * @author Denis soares moreira
  */
+@Document
 public class LogisticMap extends Entity {
 
 	
@@ -19,6 +23,7 @@ public class LogisticMap extends Entity {
 	/**
 	 * Nome ou apelido do mapa
 	 */
+	@Indexed(unique = true)
 	private String name;
 
 	/**

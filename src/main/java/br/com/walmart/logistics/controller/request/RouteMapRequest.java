@@ -1,10 +1,13 @@
 package br.com.walmart.logistics.controller.request;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Detalhes do mapa logistico 
  * @author Denis soares moreira
  *
  */
+//@XmlRootElement(name="RouteMap")
 public class RouteMapRequest {
 
 	/**

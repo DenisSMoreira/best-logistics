@@ -108,11 +108,11 @@ public class LogisticsService {
 			listBestWay.add(menorAdjacente);
 			listRoutesMaps.remove(menorAdjacente);
 			
-			for (RouteMap routeMap2 : listRoutesMaps) {
+			for (RouteMap routeMap : listRoutesMaps) {
 				
-				if(routeMap2.getPointOrigin().equals(menorAdjacente.getDestinationPoint())){
+				if(routeMap.getPointOrigin().equals(menorAdjacente.getDestinationPoint())){
 					
-					listNeighbors.add(routeMap2);
+					listNeighbors.add(routeMap);
 				} else {
 					if(menorAdjacente.getDestinationPoint().equals(destinationPoint) || destinationPoint.equals(menorAdjacente.getPointOrigin())){
 						listRoutesMaps.clear();

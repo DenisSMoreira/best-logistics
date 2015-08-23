@@ -23,5 +23,32 @@ Esse sistema pretende melhorar as entregas aplicando uma logística que sempre v
 ![ScreenShot](https://lh4.googleusercontent.com/7V_X-ZE-bprk1efmlbAEVn-xs0yNwPj2UT6PE8u4qdYHroTQLUAd8B1ZrdezRgnNMrPUOXPFljnIi3o=w1342-h547-rw)
     
     
-**Instalação**
+**Requisito do sistema**
     
+  * Oracle JDK 8u20
+  * Apache Maven 3.3.3
+  * MongoDB 3.0   
+  * Git
+ 
+**Build Project**   
+
+   Abra o terminal e execute o seguinte comando para baixar o repositorio:
+   
+```
+    git clone https://github.com/DenisSMoreira/walmart-challenge.git
+   
+```
+ Em seguida execute o seguinte comando, lembre-se de verificar se os softwares requeridos estão em execução e instalados, porque existe um pequeno teste de integração.
+ 
+```
+    mvn clean install
+    mvn spring-boot:run
+   
+```
+
+ Agora é só abrir a seguinte URL no browser para ter acesso a API do swagger para poder consumir o webservice, lá existirá o JSON SCHEMA para exemplo e as urls:
+ 
+ ```
+ localhost:8080/swagger/index.html
+ 
+ ```

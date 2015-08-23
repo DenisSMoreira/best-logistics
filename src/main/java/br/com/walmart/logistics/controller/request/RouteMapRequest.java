@@ -1,5 +1,8 @@
 package br.com.walmart.logistics.controller.request;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -7,22 +10,31 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Denis soares moreira
  *
  */
-//@XmlRootElement(name="RouteMap")
+@XmlRootElement(name="RouteMap")
 public class RouteMapRequest {
 
 	/**
 	 * Ponto de origem
 	 */
+    @Min(1)
+    @Max(30)
+    @NotNull
 	private String pointOrigin;
 	
 	/**
 	 * Ponto de destino
 	 */
+    @Min(1)
+    @Max(30)
+    @NotNull
 	private String destinationPoint;
 	
 	/**
 	 * Distância entre os pontos em quilômetros
 	 */
+    @Min(1)
+    @Max(10)
+    @NotNull
 	private String distancePoints;
 
 	/**

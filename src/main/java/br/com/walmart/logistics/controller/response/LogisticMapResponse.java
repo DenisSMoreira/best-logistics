@@ -2,11 +2,15 @@ package br.com.walmart.logistics.controller.response;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Pojo de resposta, usado para um posivel tratamento especial de retorno para os consumidores
  * @author Denis soares moreira
  *
  */
+@XmlRootElement(name="logisticMap")
 public class LogisticMapResponse {
 
 	/**
@@ -22,6 +26,7 @@ public class LogisticMapResponse {
 	/**
 	 * Detalhes do mapa logistico que contem a rota
 	 */
+	@XmlElement(name="listRoutesMaps")
 	private List<RouteMapResponse> listRoutesMaps;
 
 	/**

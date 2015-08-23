@@ -51,21 +51,16 @@ public class LogisticsIntegrationTest {
 		
 	}
 	
-	public void  findLogisticMapByName(){
-		
-	}
-	
-	public void saveRouteMap(){
-	
+	@Test
+	public void saveRouteMap() throws Exception{
+		mockMvc.perform(get("/logistics/saveRouteMap"))
+		   .andExpect(status().isMethodNotAllowed());
 	}
 
- 
-	public void saveListRoutesMaps() {
-	
-	}
-	
-	public void calculateLowerCostRoute(){
-		
+	@Test
+	public void calculateLowerCostRoute() throws Exception{
+		mockMvc.perform(get("/logistics/calculateLowerCostRoute"))
+		   .andExpect(status().isMethodNotAllowed());
 	}
 	
 }

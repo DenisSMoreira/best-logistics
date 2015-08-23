@@ -74,74 +74,7 @@ public class LogisticsServiceTest {
 		logisticsService.getMinorRouteMap(routefound );
 	}
 
-	private List<RouteMap> pupulateRoutesMaps() {
-		List<RouteMap> routefound = new ArrayList<RouteMap>();
-		RouteMap routeMap = new RouteMap();
-		routeMap.setDistancePoints(10d);
-		routeMap.setPointOrigin("A");
-		routeMap.setDestinationPoint("B");
-		
-		RouteMap routeMap2 = new RouteMap();
-		routeMap2.setDistancePoints(13d);
-		routeMap2.setPointOrigin("A");
-		routeMap2.setDestinationPoint("C");
-		
-		RouteMap routeMap3 = new RouteMap();
-		routeMap3.setDistancePoints(5d);
-		routeMap3.setPointOrigin("C");
-		routeMap3.setDestinationPoint("D");
-		
-		RouteMap routeMap4 = new RouteMap();
-		routeMap4.setDistancePoints(10d);
-		routeMap4.setPointOrigin("D");
-		routeMap4.setDestinationPoint("F");
-		
-		RouteMap routeMap5 = new RouteMap();
-		routeMap5.setDistancePoints(8d);
-		routeMap5.setPointOrigin("B");
-		routeMap5.setDestinationPoint("E");
-		
-		RouteMap routeMap6 = new RouteMap();
-		routeMap6.setDistancePoints(7d);
-		routeMap6.setPointOrigin("E");
-		routeMap6.setDestinationPoint("F");
-		
-		RouteMap routeMap7 = new RouteMap();
-		routeMap7.setDistancePoints(6d);
-		routeMap7.setPointOrigin("B");
-		routeMap7.setDestinationPoint("D");
-		
-		RouteMap routeMap8 = new RouteMap();
-		routeMap8.setDistancePoints(2d);
-		routeMap8.setPointOrigin("E");
-		routeMap8.setDestinationPoint("D");
-		
-		
-		routefound.add(routeMap);
-		routefound.add(routeMap2);
-		routefound.add(routeMap3);
-		routefound.add(routeMap4);
-		routefound.add(routeMap5);
-		routefound.add(routeMap6);
-		routefound.add(routeMap7);
-		routefound.add(routeMap8);
-		
-		return routefound;
-	}
-	
-	@Test
-	public void saveListRoutesMaps(){
-		List<LogisticMapRequest> listLogisticMapRequests = Arrays.asList(populateLogisticMapRequest());
-		
-		LogisticMap mapEntity = populateLogisticMapEntity();
-		Mockito.when(logisticsRepository.save(mapEntity)).thenReturn(mapEntity);
-		
-		List<LogisticMapResponse> listSavedRoutesMaps = logisticsService.saveListRoutesMaps(listLogisticMapRequests);
-		
-		assertNotNull(listSavedRoutesMaps);
-		assertFalse(listSavedRoutesMaps.isEmpty());
-	}
-	
+
 	@Test
 	public void saveRouteMap(){
 		LogisticMap mapEntity = populateLogisticMapEntity();
@@ -204,5 +137,59 @@ public class LogisticsServiceTest {
 		logisticMap.setListRoutesMaps(routeMap );
 		return logisticMap;
 	}
-	
+
+	private List<RouteMap> pupulateRoutesMaps() {
+		List<RouteMap> routefound = new ArrayList<RouteMap>();
+		RouteMap routeMap = new RouteMap();
+		routeMap.setDistancePoints(10d);
+		routeMap.setPointOrigin("A");
+		routeMap.setDestinationPoint("B");
+		
+		RouteMap routeMap2 = new RouteMap();
+		routeMap2.setDistancePoints(13d);
+		routeMap2.setPointOrigin("A");
+		routeMap2.setDestinationPoint("C");
+		
+		RouteMap routeMap3 = new RouteMap();
+		routeMap3.setDistancePoints(5d);
+		routeMap3.setPointOrigin("C");
+		routeMap3.setDestinationPoint("D");
+		
+		RouteMap routeMap4 = new RouteMap();
+		routeMap4.setDistancePoints(10d);
+		routeMap4.setPointOrigin("D");
+		routeMap4.setDestinationPoint("F");
+		
+		RouteMap routeMap5 = new RouteMap();
+		routeMap5.setDistancePoints(8d);
+		routeMap5.setPointOrigin("B");
+		routeMap5.setDestinationPoint("E");
+		
+		RouteMap routeMap6 = new RouteMap();
+		routeMap6.setDistancePoints(7d);
+		routeMap6.setPointOrigin("E");
+		routeMap6.setDestinationPoint("F");
+		
+		RouteMap routeMap7 = new RouteMap();
+		routeMap7.setDistancePoints(6d);
+		routeMap7.setPointOrigin("B");
+		routeMap7.setDestinationPoint("D");
+		
+		RouteMap routeMap8 = new RouteMap();
+		routeMap8.setDistancePoints(2d);
+		routeMap8.setPointOrigin("E");
+		routeMap8.setDestinationPoint("D");
+		
+		
+		routefound.add(routeMap);
+		routefound.add(routeMap2);
+		routefound.add(routeMap3);
+		routefound.add(routeMap4);
+		routefound.add(routeMap5);
+		routefound.add(routeMap6);
+		routefound.add(routeMap7);
+		routefound.add(routeMap8);
+		
+		return routefound;
+	}
 }

@@ -5,6 +5,8 @@ package br.com.walmart.logistics.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,7 +65,7 @@ public class LogisticsController {
 			@ApiResponse(code = 400, message = "Bad Request"),
 			@ApiResponse(code = 500, message = "Internal Server Error") })
 	public @ResponseBody LogisticMapResponse findLogisticMapByName(
-												@RequestParam String name){
+												@RequestParam(name="name", required=true) String name){
 		
 		return logisticsService.findLogisticMapByName(name);
 	}
@@ -79,31 +81,12 @@ public class LogisticsController {
 			@ApiResponse(code = 400, message = "Bad Request"),
 			@ApiResponse(code = 500, message = "Internal Server Error") })
 	public @ResponseBody LogisticMapResponse saveRouteMap(	
-												@RequestBody LogisticMapRequest logisticMapRequest) {
+			@Valid @RequestBody LogisticMapRequest logisticMapRequest) {
 	
 		
 		return logisticsService.saveRouteMap(logisticMapRequest);
 	}
 
- 
-	/**
-	 * Salva uma lista de rotas, muito útil para as aplicações que vão consumir
-	 * 
-	 * @return List<LogisticMap.class>
-	 */
-	@RequestMapping(value = "/saveListRoutesMaps", method = RequestMethod.POST, produces="application/json; charset=utf-8")
-	@ApiOperation(value = "saveListRoutesMaps", notes = "Salva uma lista de rotas, muito útil para as aplicações que vão consumir" , 
-				  response =  LogisticMapResponse.class, responseContainer="List")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
-			@ApiResponse(code = 400, message = "Bad Request"),
-			@ApiResponse(code = 500, message = "Internal Server Error") })
-	public @ResponseBody List<LogisticMapResponse> saveListRoutesMaps(
-													@RequestBody List<LogisticMapRequest> listLogisticMapRequests) {
-	
-		
-		return logisticsService.saveListRoutesMaps(listLogisticMapRequests);
-	}
-	
 	/**
 	 * Cacula a melhor rota com menor custo
 	 * 
@@ -116,11 +99,11 @@ public class LogisticsController {
 			@ApiResponse(code = 400, message = "Bad Request"),
 			@ApiResponse(code = 500, message = "Internal Server Error") })
 	public @ResponseBody TravelLowerCostResponse calculateLowerCostRoute( 
-											@RequestParam("nameMap") String nameMap,
-											@RequestParam("pointOrigin") String pointOrigin,
-											@RequestParam("destinationPoint") String destinationPoint,
-											@RequestParam("autonomy") Double autonomy,
-											@RequestParam("value") Double value) throws Exception{
+											@RequestParam(required= true, name="nameMap") String nameMap,
+											@RequestParam(required= true, name="pointOrigin") String pointOrigin,
+											@RequestParam(required= true, name="destinationPoint") String destinationPoint,
+											@RequestParam(required= true, name="autonomy") Double autonomy,
+											@RequestParam(required= true, name="value") Double value) throws Exception{
 		
 		return logisticsService.calculateLowerCostRoute(nameMap, pointOrigin , destinationPoint, autonomy, value);
 	}

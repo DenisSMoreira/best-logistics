@@ -30,7 +30,6 @@ public class LogisticMapParse {
 		
 		logisticMap.getListRoutesMaps().forEach( (RouteMap map) -> {
 			final RouteMapResponse mapResponse = new RouteMapResponse() ;
-			mapResponse.setId(map.getId());
 			mapResponse.setPointOrigin(map.getPointOrigin());
 			mapResponse.setDestinationPoint(map.getDestinationPoint());
 			mapResponse.setDistancePoints(map.getDistancePoints().toString());

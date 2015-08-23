@@ -239,24 +239,6 @@ public class LogisticsService {
 	}
 
 	/**
-	 * Sava uma coleção de RoutesMaps e aplica o parse para retornar o pojo correto de acordo com seu papel
-	 * @param listLogisticMapRequests {@link List<LogisticMapRequest.class>}
-	 * @return {@link List<LogisticMapResponse.class>}
-	 */
-	public List<LogisticMapResponse> saveListRoutesMaps(List<LogisticMapRequest> listLogisticMapRequests) {
-
-		List<LogisticMapResponse> listResponse = new ArrayList<>();
-		
-		listLogisticMapRequests.forEach((LogisticMapRequest request) -> {
-			LogisticMap entity = LogisticMapParse.logisticRequestToLogisticEntity(request);
-			LogisticMap saved = logisticsRepository.save(entity);
-			listResponse.add(LogisticMapParse.logisticEntityToLogisticResponse(saved));
-		});
-		
-		return listResponse;
-	}
-
-	/**
 	 * Salva a RouteMap e aplica um parse para retornar o pojo correto de acordo com seu papel
 	 *  na aplicação 
 	 * @param mapRequest {@link LogisticMapRequest.class}

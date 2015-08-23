@@ -22,7 +22,7 @@ public class LogisticMapResponse {
 	/**
 	 * Detalhes do mapa logistico que contem a rota
 	 */
-	private List<RouteMapResponse> routeMap;
+	private List<RouteMapResponse> listRoutesMaps;
 
 	/**
 	 * @return the id
@@ -55,15 +55,15 @@ public class LogisticMapResponse {
 	/**
 	 * @return routeMap {@link List<RouteMapResponse>}
 	 */
-	public List<RouteMapResponse> getRouteMap() {
-		return routeMap;
+	public List<RouteMapResponse> getListRoutesMaps() {
+		return listRoutesMaps;
 	}
 
 	/**
 	 * @param routeMap the routeMap to set
 	 */
-	public void setRouteMap(List<RouteMapResponse> routeMap) {
-		this.routeMap = routeMap;
+	public void setListRoutesMaps(List<RouteMapResponse> listRoutesMaps) {
+		this.listRoutesMaps = listRoutesMaps;
 	}
 
 }

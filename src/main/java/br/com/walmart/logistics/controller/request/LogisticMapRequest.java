@@ -12,7 +12,7 @@ public class LogisticMapRequest {
 	/**
 	 * Detalhes do mapa logistico que contem a rota
 	 */
-	private List<RouteMapRequest> routeMap;
+	private List<RouteMapRequest> listRoutesMaps;
 
 	/**
 	 * @return the name
@@ -31,15 +31,15 @@ public class LogisticMapRequest {
 	/**
 	 * @return routeMap {@link List<RouteMapRequest>}
 	 */
-	public List<RouteMapRequest> getRouteMap() {
-		return routeMap;
+	public List<RouteMapRequest> getListRoutesMaps() {
+		return listRoutesMaps;
 	}
 
 	/**
 	 * @param routeMap the routeMap to set
 	 */
-	public void setRouteMap(List<RouteMapRequest> routeMap) {
-		this.routeMap = routeMap;
+	public void setListRoutesMaps(List<RouteMapRequest> routeMap) {
+		this.listRoutesMaps = routeMap;
 	}
 	
 

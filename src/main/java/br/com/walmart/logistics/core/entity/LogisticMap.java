@@ -24,20 +24,20 @@ public class LogisticMap extends Entity {
 	/**
 	 * Detalhes do mapa logistico que contem a rota
 	 */
-	private List<RouteMap> routeMap;
+	private List<RouteMap> listRoutesMaps;
 
 	/**
 	 * @return the routeMap
 	 */
-	public List<RouteMap> getRouteMap() {
-		return routeMap;
+	public List<RouteMap> getListRoutesMaps() {
+		return listRoutesMaps;
 	}
 
 	/**
 	 * @param routeMap the routeMap to set
 	 */
-	public void setRouteMap(List<RouteMap> routeMap) {
-		this.routeMap = routeMap;
+	public void setListRoutesMaps(List<RouteMap> listRouteMap) {
+		this.listRoutesMaps = listRouteMap;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class LogisticMap extends Entity {
 		int result = 1;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result
-				+ ((routeMap == null) ? 0 : routeMap.hashCode());
+				+ ((listRoutesMaps == null) ? 0 : listRoutesMaps.hashCode());
 		return result;
 	}
 
@@ -84,10 +84,10 @@ public class LogisticMap extends Entity {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (routeMap == null) {
-			if (other.routeMap != null)
+		if (listRoutesMaps == null) {
+			if (other.listRoutesMaps != null)
 				return false;
-		} else if (!routeMap.equals(other.routeMap))
+		} else if (!listRoutesMaps.equals(other.listRoutesMaps))
 			return false;
 		return true;
 	}

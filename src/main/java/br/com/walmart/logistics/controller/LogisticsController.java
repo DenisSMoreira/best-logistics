@@ -3,7 +3,6 @@
  */
 package br.com.walmart.logistics.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.walmart.logistics.controller.request.LogisticMapRequest;
 import br.com.walmart.logistics.controller.response.LogisticMapResponse;
-import br.com.walmart.logistics.controller.response.RouteMapResponse;
+import br.com.walmart.logistics.controller.response.TravelLowerCostResponse;
 import br.com.walmart.logistics.core.entity.LogisticMap;
 import br.com.walmart.logistics.service.LogisticsService;
 
@@ -43,14 +42,14 @@ public class LogisticsController {
 	 * @return List<LogisticMap.class>
 	 */
 	@RequestMapping(value = "/findAllRoutesMaps", method = RequestMethod.GET, produces="application/json; charset=utf-8")
-	@ApiOperation(value = "findAllRoutesMaps", notes = "Retorna todas as rotas cadastradas anteriormente", response =  LogisticMap.class, responseContainer="List")
+	@ApiOperation(value = "findAllRoutesMaps", notes = "Retorna todas as rotas cadastradas anteriormente", response =  LogisticMapResponse.class, responseContainer="List")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
 			@ApiResponse(code = 400, message = "Bad Request"),
 			@ApiResponse(code = 500, message = "Internal Server Error") })
-	public @ResponseBody List<LogisticMap> findAllRoutesMaps() {
+	public @ResponseBody List<LogisticMapResponse> findAllRoutesMaps() {
 		
 		
-		return new ArrayList<LogisticMap>();
+		return logisticsService.findAllRoutesMaps();
 	}
 	
 	/**
@@ -66,7 +65,7 @@ public class LogisticsController {
 	public @ResponseBody LogisticMapResponse findLogisticMapByName(
 												@RequestParam String name){
 		
-		return null;
+		return logisticsService.findLogisticMapByName(name);
 	}
 	
 	/**
@@ -83,8 +82,7 @@ public class LogisticsController {
 												@RequestBody LogisticMapRequest logisticMapRequest) {
 	
 		
-		LogisticMapResponse logisticMap = null;
-		return logisticMap;
+		return logisticsService.saveRouteMap(logisticMapRequest);
 	}
 
  
@@ -103,27 +101,28 @@ public class LogisticsController {
 													@RequestBody List<LogisticMapRequest> listLogisticMapRequests) {
 	
 		
-		List<LogisticMapResponse> logisticMap = null;
-		return logisticMap;
+		return logisticsService.saveListRoutesMaps(listLogisticMapRequests);
 	}
 	
 	/**
 	 * Cacula a melhor rota com menor custo
 	 * 
 	 * @return List<LogisticMap.class>
+	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/calculateLowerCostRoute", method = RequestMethod.POST, produces="application/json; charset=utf-8")
-	@ApiOperation(value = "calculateLowerCostRoute", notes = "Cacula a melhor rota com menor custo" , response =  LogisticMapResponse.class)
+	@ApiOperation(value = "calculateLowerCostRoute", notes = "Cacula a melhor rota com menor custo" , response =  TravelLowerCostResponse.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
 			@ApiResponse(code = 400, message = "Bad Request"),
 			@ApiResponse(code = 500, message = "Internal Server Error") })
-	public @ResponseBody RouteMapResponse calculateLowerCostRoute( 
+	public @ResponseBody TravelLowerCostResponse calculateLowerCostRoute( 
+											@RequestParam("nameMap") String nameMap,
 											@RequestParam("pointOrigin") String pointOrigin,
 											@RequestParam("destinationPoint") String destinationPoint,
 											@RequestParam("autonomy") Double autonomy,
-											@RequestParam("value") Double value){
+											@RequestParam("value") Double value) throws Exception{
 		
-		return null;
+		return logisticsService.calculateLowerCostRoute(nameMap, pointOrigin , destinationPoint, autonomy, value);
 	}
 	
 	

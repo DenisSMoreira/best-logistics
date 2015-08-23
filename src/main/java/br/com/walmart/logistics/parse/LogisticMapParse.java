@@ -25,9 +25,10 @@ public class LogisticMapParse {
 	public static final LogisticMapResponse logisticEntityToLogisticResponse(LogisticMap logisticMap) {
 		final LogisticMapResponse logisticMapResponse = new LogisticMapResponse();
 		logisticMapResponse.setName(logisticMap.getName());
+		logisticMapResponse.setId(logisticMap.getId());
 		final List<RouteMapResponse> routeMapResponse = new ArrayList<>();
 		
-		logisticMap.getRouteMap().forEach( (RouteMap map) -> {
+		logisticMap.getListRoutesMaps().forEach( (RouteMap map) -> {
 			final RouteMapResponse mapResponse = new RouteMapResponse() ;
 			mapResponse.setPointOrigin(map.getPointOrigin());
 			mapResponse.setDestinationPoint(map.getDestinationPoint());
@@ -35,7 +36,7 @@ public class LogisticMapParse {
 			routeMapResponse.add(mapResponse);
 		});
 		
-		logisticMapResponse.setRouteMap(routeMapResponse );
+		logisticMapResponse.setListRoutesMaps(routeMapResponse );
 		return logisticMapResponse;
 	}
 	
@@ -51,7 +52,7 @@ public class LogisticMapParse {
 		
 		final List<RouteMap> routeMapResponse = new ArrayList<>();
 		
-		logisticMapRequest.getRouteMap().forEach( (RouteMapRequest map) -> {
+		logisticMapRequest.getListRoutesMaps().forEach( (RouteMapRequest map) -> {
 			RouteMap mapEntity = new RouteMap() ;
 			mapEntity.setPointOrigin(map.getPointOrigin());
 			mapEntity.setDestinationPoint(map.getDestinationPoint());
@@ -59,7 +60,7 @@ public class LogisticMapParse {
 			routeMapResponse.add(mapEntity);
 		});
 		
-		logisticMapEntity.setRouteMap(routeMapResponse );
+		logisticMapEntity.setListRoutesMaps(routeMapResponse );
 		return logisticMapEntity;
 	}
 }

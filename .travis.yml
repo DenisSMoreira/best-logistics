@@ -7,3 +7,5 @@ notifications:
     recipients:
       - denis.soares.moreira@gmail.com
     on_success: always
+    
+services: mongodb

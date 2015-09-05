@@ -2,7 +2,7 @@ Walmart Logistics
 =======
 Esse sistema pretende melhorar as entregas aplicando uma logística que sempre visa o menor custo para nossa querida Walmart :)  
 
-
+[![Build Status](https://travis-ci.org/DenisSMoreira/walmart-challenge.svg?branch=master)](https://travis-ci.org/DenisSMoreira/walmart-challenge)
 
 **Sobre a solução** 
 -------  

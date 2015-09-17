@@ -24,8 +24,8 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		final ApiInfo apiInfo = new ApiInfo("Walmart Logistics Automation Core API", 
-				"Novo sistema de logistica para Walmart. Onde sua principal tarefa é inovar o sistema de entregas visando sempre o menor custo.", null, "denis.soares.moreira@gmail.com",
+		final ApiInfo apiInfo = new ApiInfo("Best Logistics Automation Core API", 
+				"Api de logistica. Onde sua principal tarefa é inovar o sistema de entregas visando sempre o menor custo.", null, "denis.soares.moreira@gmail.com",
 				"Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0.html");
 		return apiInfo;
 	}

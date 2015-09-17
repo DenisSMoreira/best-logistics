@@ -35,7 +35,7 @@ Esse sistema pretende melhorar as entregas aplicando uma logística que sempre v
    Abra o terminal e execute o seguinte comando para baixar o repositorio:
    
 ```
-    git clone https://github.com/DenisSMoreira/walmart-challenge.git
+    git clone https://github.com/DenisSMoreira/best-logistics.git
 ```
  Em seguida execute o seguinte comando, lembre-se de verificar se os softwares requeridos estão em execução e instalados, porque existe um pequeno teste de integração.
  

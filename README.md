@@ -20,7 +20,7 @@ Esse sistema pretende melhorar as entregas aplicando uma logística que sempre v
  
   * Swagger: Quando se fala em integração, sempre vem aquele friozinho na barriga na hora da estimativa não é? E como garantir que quem vai consumir seu webservice não irá perder horas de stress, em uma tarefa que era para ser fácil e rápido finalizando até mesmo antes nosso café expresso? Minha maior motivação em usar essa ferramenta vem na facilidade de exposição da camada rest-full para facilitar a integração e poder garantir que quem irá ficar responsável ficará muito feliz em ter essa tarefa.
     
-![ScreenShot](https://github.com/DenisSMoreira/walmart-challenge/blob/master/src/main/webapp/swagger/images/Swagger.png?raw=true)
+![ScreenShot](https://github.com/DenisSMoreira/walmart-challenge/blob/master/src/main/webapp/swagger/images/print_swagger.jpg?raw=true)
     
     
 **Requisitos da aplicação**

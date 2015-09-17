@@ -2,7 +2,7 @@ Best Logistics
 =======
 Esse sistema pretende melhorar as entregas aplicando uma logística que sempre visa o menor custo :)  
 
-[![Build Status](https://travis-ci.org/DenisSMoreira/walmart-challenge.svg?branch=master)](https://travis-ci.org/DenisSMoreira/walmart-challenge)
+[![Circle CI](https://circleci.com/gh/DenisSMoreira/best-logistics/tree/master.svg?style=svg)](https://circleci.com/gh/DenisSMoreira/best-logistics/tree/master)
 
 **Sobre a solução** 
 -------  
